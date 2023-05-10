@@ -4,7 +4,7 @@ using namespace std;
 
 vector<int> number = {5, 1, 3, 9, 4};
 vector<pair<int, int>> val = {{5, 0}, {1, 1}, {3, 2}, {9, 3}, {4, 4}};
-// First Element is vector value and Second Element is vector idx.
+// First Element is vector value and Second Element is vector index.
 
 int main() {
     sort(val.begin(), val.end()); // We sort the pair vector.
