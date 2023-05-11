@@ -7,9 +7,9 @@ vector<pair<int, int>> val = {{5, 0}, {1, 1}, {3, 2}, {9, 3}, {4, 4}};
 // First Element is vector value and Second Element is vector index.
 
 int main() {
-    sort(val.begin(), val.end()); // We sort the pair vector.
+    sort(val.begin(), val.end()); // We sort the pair vector average case is O(N*logN) and worst case is O(N^2).
     vector<int> cc(val.size()); // Initialize the coornidate compression vector to get the compressed index in O(1).
-    for(int i = 0, idx = 0; i < val.size(); i++) {
+    for(int i = 0, idx = 0; i < val.size(); i++) { // Time complexity is O(N)
         if( i > 0 && val[i].first != val[i-1].first ) idx++; // If previous vector value is as same as current vector value then it's the same value.
         cc[val[i].second] = idx;
     };
@@ -19,5 +19,5 @@ int main() {
     return 0;
 };
 
-// Summary : Time complexity is O(N*logN) [Worst case is O(N^2)] for sorting vector of value and O(N) for building vector of compressed index.
+// Summary : Time complexity is O(N) for building vector of compressed index.
 //           Space complexity is O(N).
