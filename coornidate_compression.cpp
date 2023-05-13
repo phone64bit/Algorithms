@@ -20,4 +20,3 @@ int main() {
 };
 
 // Summary : Time complexity is O(N) for building vector of compressed index.
-//           Space complexity is O(N).
